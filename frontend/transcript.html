@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Transcript Input</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>📄 Paste Meeting Transcript</h2>
+
+<textarea id="transcript" rows="10" placeholder="Paste meeting transcript here..."></textarea>
+
+<button onclick="generateNotes()">Generate AI Notes</button>
+
+<div id="loader" class="loader" style="display:none;"></div>
+
+<br>
+<a href="/" class="back">⬅ Back</a>
+<div id="loaderOverlay">
+<div class="spinner"></div>
+<p>AI is analyzing your meeting...</p>
+</div>
+</div>
+
+<script src="/static/script.js"></script>
+
+</body>
+</html>

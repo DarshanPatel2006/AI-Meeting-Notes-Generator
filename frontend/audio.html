@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Upload Audio</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Upload Meeting Audio</h2>
+
+<input type="file" id="audioFile">
+
+<button onclick="uploadAudio()">Generate AI Notes</button>
+
+<a href="/">⬅ Back</a>
+
+<div id="loaderOverlay">
+<div class="spinner"></div>
+<p>AI is analyzing your meeting...</p>
+</div>
+
+</div>
+
+<script src="/static/script.js"></script>
+
+</body>
+</html>
