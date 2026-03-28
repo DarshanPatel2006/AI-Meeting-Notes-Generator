@@ -68,18 +68,17 @@ uvicorn backend.main:app --reload
 
 Open:
 http://localhost:8000/
-
-📌 Future Improvements
+```
+## 📌 Future Improvements
+```
 Speaker identification
 Real-time transcription
 RAG-based search
 Export to PDF
 ```
+
 ## 👨‍💻 Author
-
 ### Darshan Patel
+⭐ Support
 
-## ⭐ Support
-```
 If you found this project useful, consider giving it a ⭐ on GitHub!
-```
