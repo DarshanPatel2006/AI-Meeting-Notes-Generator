@@ -1,113 +1,110 @@
-# 🤖 AI Meeting Notes Generator
+🤖 AI Meeting Notes Generator (Ashtavakra AI)
 
-An AI-powered web application that converts meeting audio or transcripts into structured notes using **Whisper Speech-to-Text** and **Llama3 (Ollama)**.
+An AI-powered web application that converts meeting audio or transcripts into structured notes using Whisper (Speech-to-Text) and Llama3 (Ollama) — fully local, fast, and no paid APIs 🚀
 
----
-
-## 🚀 Features
-
-- 🎤 Upload meeting audio and convert it to text
-- 📝 Generate structured meeting notes automatically
-- 📌 Extract **Summary, Key Points, and Action Items**
-- 🧠 Uses **local LLM (Llama3 via Ollama)** – no paid APIs required
-- ⚡ Fast backend with **FastAPI**
-- 🌐 Interactive frontend interface
-- ⏳ AI processing loader animation
-- 📥 Download generated notes
-
----
-
-## 🛠 Tech Stack
-
-| Layer | Technology |
-|---|---|
-Frontend | HTML, CSS, JavaScript |
-Backend | FastAPI |
-Speech Recognition | OpenAI Whisper |
-LLM | Llama3 (Ollama) |
-Audio Processing | FFmpeg |
-
----
-
-## 🧠 How It Works
-
-
-Audio File
-↓
-Whisper Speech-to-Text
-↓
+🔥 What’s New (Latest Updates)
+❓ Ask Questions from Generated Notes (NEW 🔥)
+🎨 Added favicon & PWA icons
+⚡ Improved UI & smooth loading animation
+📂 Clean and structured project architecture
+📸 Added screenshots for better documentation
+🧠 Fully local AI (privacy-friendly, no API cost)
+🚀 Features
+🎤 Upload meeting audio files
+🧾 Convert audio → text using Whisper
+✍️ Paste custom transcripts manually
+📝 Generate structured meeting notes:
+Summary
+Key Points
+Action Items
+❓ Ask questions based on generated notes
+⚡ Powered by Llama3 (Ollama)
+🌐 Interactive frontend UI
+⏳ AI processing loader animation
+📥 Download generated notes
+🛠 Tech Stack
+Layer	Technology
+Frontend	HTML, CSS, JavaScript
+Backend	FastAPI
+Speech-to-Text	OpenAI Whisper
+LLM	Llama3 (Ollama)
+Audio Processing	FFmpeg
+🧠 How It Works
+Audio / Transcript
+        ↓
+Whisper (Speech-to-Text)
+        ↓
 Transcript
-↓
+        ↓
 Llama3 (Ollama)
-↓
-Structured Meeting Notes
-↓
+        ↓
+Structured Notes
+        ↓
 Summary + Key Points + Action Items
+📸 Screenshots
+🏠 Landing Page
 
+🎤 Upload Audio
 
----
+📝 Transcript Input
 
-## 📸 Screenshots
+⏳ AI Processing
 
-### Landing Page
-![Landing](screenshots/landing_page.png)
+📊 Generated Notes
 
-### Upload Audio
-![Upload](screenshots/audio_upload.png)
+❓ Ask Questions Feature
 
-### Transcript Input
-![Transcript](screenshots/transcript_input.png)
+📂 Project Structure
+frontend/
+│── static/
+│   ├── css/
+│   ├── js/
+│   ├── icons/
+│   └── images/
+│
+│── index.html
+│── audio.html
+│── transcript.html
+│── result.html
 
-### AI Processing
-![Loader](screenshots/loading_screen.png)
+backend/
+│── main.py
 
-### Generated Notes
-![Result](screenshots/generated_notes.png)
-
----
-
-## ⚙️ Installation
-
-Clone the repository:
-
-```bash
+screenshots/
+uploads/
+⚙️ Installation
+1️⃣ Clone Repository
 git clone https://github.com/YOUR_USERNAME/AI-Meeting-Notes-Generator.git
 cd AI-Meeting-Notes-Generator
-
-Create virtual environment:
-
+2️⃣ Create Virtual Environment
 python -m venv venv
-
-Activate environment:
-
+3️⃣ Activate Environment
 venv\Scripts\activate
-
-Install dependencies:
-
+4️⃣ Install Dependencies
 pip install -r requirements.txt
+5️⃣ Install Required Tools
+Install FFmpeg
+Install Ollama
 
-Install FFmpeg and Ollama before running.
+Pull Llama3 model:
 
-Run the server:
-
+ollama run llama3
+6️⃣ Run Backend
 uvicorn backend.main:app --reload
-
-Open in browser:
-
+7️⃣ Open in Browser
 http://127.0.0.1:8000/app
 📌 Future Improvements
-
-Speaker identification
-
-Vector database memory
-
-RAG-based meeting search
-
-Real-time meeting transcription
-
-Export notes as PDF
-
+🔊 Speaker Identification
+🧠 RAG-based smart search
+📚 Vector database memory
+🎙 Real-time transcription
+📄 Export notes as PDF
+🌍 Multi-language support
 👨‍💻 Author
 
 Darshan Patel
-AI / ML Developer
+AI / ML Developer 🚀
+
+⭐ Support
+
+If you like this project, give it a ⭐ on GitHub!

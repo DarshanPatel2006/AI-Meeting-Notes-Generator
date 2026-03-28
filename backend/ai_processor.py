@@ -4,17 +4,30 @@ import ollama
 def generate_meeting_notes(transcript):
 
     prompt = f"""
-You are an AI meeting assistant.
+You are a professional AI meeting assistant.
 
-Analyze the meeting transcript and generate structured notes.
+Analyze the transcript and generate high-quality meeting notes.
 
-Return the output in this format:
+RULES:
+- Extract meaningful information clearly
+- If owner is mentioned → include it
+- If not clearly mentioned → try to infer from context
+- If still not possible → write "Not specified"
+- Keep notes professional and useful
+
+Return format:
 
 Summary:
-Key Points:
-Action Items:
+(2-3 lines)
 
-Meeting Transcript:
+Key Points:
+- clear point
+- clear point
+
+Action Items:
+- Owner: <name or Not specified> | Task: <clear task> | Deadline: <date or Not specified>
+
+Transcript:
 {transcript}
 """
 

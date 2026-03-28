@@ -1,32 +1,76 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>AI Meeting Notes Generator</title>
-<link rel="stylesheet" href="/static/style.css">
+<title>Ashtavakra AI</title>
+<link rel="stylesheet" href="/static/css/style.css">
+<link rel="icon" href="/static/icons/favicon.ico">
+
+<link rel="apple-touch-icon" href="/static/icons/apple-touch-icon.png">
+
+<link rel="manifest" href="/static/icons/site.webmanifest">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
+    <canvas id="particles"></canvas>
+    <nav class="navbar">
+        <div class="nav-left">
+            <img src="/static/images/logo.png">
+        </div>
+    
+        <div class="nav-center">
+            <span class="brand-name">Ashtavakra AI</span>
+        </div>
+    
+        <div class="nav-right">
+            <!-- future login/signup -->
+        </div>
+    </nav>
+<section class="hero">
 
-<div class="hero">
+    <!-- 🔥 PYRAMID -->
+    <div class="pyramid-loader">
+        <div class="wrapper">
+          <span class="side side1"></span>
+          <span class="side side2"></span>
+          <span class="side side3"></span>
+          <span class="side side4"></span>
+          <span class="shadow"></span>
+        </div>  
+      </div>
 
-<h1>🤖 AI Meeting Notes Generator</h1>
-<p>Turn meeting audio or transcripts into structured notes instantly</p>
+    <h1>Offline AI Meeting Copilot</h1>
+    <p>Private • Intelligent • No Internet Required</p>
 
-<div class="options">
+    <div class="feature-cards">
 
-<a href="/static/audio.html" class="card">
-🎤 Upload Meeting Audio
-<p>Convert spoken meetings into notes</p>
-</a>
+        <a href="/audio" class="feature-card">
+            <div class="card-icon">🎤</div>
+            <h3>Audio to Notes</h3>
+            <p>Convert meeting audio into structured AI notes instantly.</p>
+        </a>
+    
+        <a href="/transcript" class="feature-card">
+            <div class="card-icon">📄</div>
+            <h3>Smart Transcript</h3>
+            <p>Turn raw transcripts into clear summaries & action items.</p>
+        </a>
+    
+    </div>
 
-<a href="/static/transcript.html" class="card">
-📄 Paste Transcript
-<p>Generate notes from meeting text</p>
-</a>
+</section>
 
-</div>
+<!-- FOOTER -->
+<footer class="footer">
+    <p>© 2026 Ashtavakra AI</p>
 
-</div>
-
+    <div class="links">
+        <a href="#">LinkedIn</a>
+        <a href="#">GitHub</a>
+        <a href="#">Jeevixa</a>
+         
+    </div>
+</footer>
+<script src="/static/js/script.js"></script>
 </body>
 </html>
