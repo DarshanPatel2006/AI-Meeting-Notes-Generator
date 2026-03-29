@@ -134,14 +134,20 @@ http://127.0.0.1:8000/
 
 ## 📸 Screenshots
 
-* 🏠 Landing Page
-* 🎤 Audio Upload
-* 📄 PDF Upload
-* 📝 Transcript Input
-* ⏳ AI Processing
-* 📊 Generated Notes
-* ❓ Ask AI
-* 🔊 Voice Interaction
+### 🏠 Landing Page
+![Landing Page](screenshots/landing_page.png)
+
+### 🎤 Audio Upload
+![Audio Upload](screenshots/audio_upload.png)
+
+### 📝 Transcript Input
+![Transcript Input](screenshots/transcript_input.png)
+
+### 📊 Generated Notes
+![Generated Notes](screenshots/generated_notes.png)
+
+### ❓ Ask Questions
+![Ask Questions](screenshots/ask_qustions.png)
 
 ---
 
