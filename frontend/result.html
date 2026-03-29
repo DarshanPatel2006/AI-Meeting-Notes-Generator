@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Ashtavakra AI</title>
+<title>Maniot AI</title>
 <link rel="stylesheet" href="/static/css/style.css">
 <link rel="icon" href="/static/icons/favicon.ico">
 
@@ -22,7 +22,7 @@
         </div>
 
         <div class="nav-center">
-            <span class="brand-name">Ashtavakra AI</span>
+            <span class="brand-name">Maniot AI</span>
         </div>
 
         <div class="nav-right"></div>
@@ -46,12 +46,8 @@
             
                 <!-- 🔥 ACTION BAR (BOTTOM STRIP) -->
                 <div class="notes-footer">
-            
-                    <button id="toggleBtn" class="expand-btn" onclick="toggleNotes()">
-                        View Full Notes
-                    </button>
-            
-                    <button class="download-btn download-btn-right" onclick="downloadNotes()">
+
+                    <button class="download-btn" onclick="downloadNotes()">
                         <svg class="svgIcon" viewBox="0 0 384 512" height="1em">
                             <path d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 
                             12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32
@@ -61,6 +57,20 @@
                         <span class="icon2"></span>
                         
                     </button>
+            
+                    <button id="toggleBtn" class="expand-btn" onclick="toggleNotes()">
+                        View Full Notes
+                    </button>
+                    <div class="toggle-cont">
+                        <input class="toggle-input" id="voiceToggle" type="checkbox" />
+                        <label class="toggle-label" for="voiceToggle">
+                          <div class="cont-label-play">
+                            <span class="label-play"></span>
+                          </div>
+                        </label>
+                      </div>
+            
+                    
             
                 </div>
             
@@ -92,9 +102,25 @@
                 class="input-box"
             >
 
-            <button class="btn full-btn" onclick="askQuestion()">
-                ✨ Ask Ashtavakra AI
-            </button>
+            <div class="ask-container">
+
+                
+                <!-- ✨ ASK BUTTON -->
+                <button class="btn ask-btn" onclick="askQuestion()">
+                    ✨ Ask Maniot AI
+                </button>
+
+                <!-- 🎤 MIC BUTTON -->
+                <button class="mic-btn" onclick="startSpeechToText()">
+                    <svg class="mic-icon" viewBox="0 0 24 24">
+                        <path d="M12 14a3 3 0 0 0 3-3V5a3 3 0 1 0-6 0v6a3 3 0 0 0 3 3zm5-3a1 1 0 0 1 2 0 
+                        7 7 0 0 1-6 6.92V21h3a1 1 0 0 1 0 2H8a1 1 0 0 1 0-2h3v-3.08A7 7 0 0 1 5 11a1 1 
+                        0 0 1 2 0 5 5 0 0 0 10 0z"/>
+                    </svg>
+                </button>
+            
+            
+            </div>
 
             <!-- ANSWER -->
             <div class="result-card" id="answerBox">
@@ -110,7 +136,7 @@
 
     <!-- FOOTER -->
     <footer class="footer">
-        <p>© 2026 Ashtavakra AI</p>
+        <p>© 2026 Maniot AI</p>
 
         <div class="links">
             <a href="#">LinkedIn</a>

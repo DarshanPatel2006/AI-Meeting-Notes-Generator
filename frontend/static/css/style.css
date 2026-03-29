@@ -27,14 +27,14 @@ body {
     align-items: center;
     justify-content: flex-start;
 
-    padding-top: 120px;
+    padding-top: 100px;
     padding-left: 15px;
     padding-right: 15px;
 }
 @media (max-width: 600px) {
     .main-content {
         justify-content: flex-start;
-        padding-top: 200px;
+        
     }
 }
 
@@ -356,6 +356,7 @@ body {
 
     width: 92%;
     max-width: 1200px;
+    height: 50px;
 
     padding: 12px 20px;
 
@@ -371,7 +372,7 @@ body {
 
 /* LEFT LOGO IMAGE */
 .logo-img {
-    height: 28px;   /* 👈 adjust if needed */
+    height: 108px;   /* 👈 adjust if needed */
     width: auto;
 }
 
@@ -380,7 +381,7 @@ body {
 
 .brand-name {
     font-size: 40px;
-    font-weight: 600;
+    font-weight: 300;
 
     background: linear-gradient(90deg, #ff3c3c, #ff7a18, #a855f7, #ff3c3c);
 
@@ -785,7 +786,7 @@ textarea {
     /* MAIN CONTAINER */
     .main-content {
         padding: 20px 15px;
-        margin-top: 200px; /* navbar space */
+        margin-top: 100px; /* navbar space */
     }
 
     /* TITLE */
@@ -1075,7 +1076,7 @@ textarea {
     background: linear-gradient(135deg, #a855f7, #6366f1);
     color: white;
     font-weight: 500;
-
+    justify-self: center;
     transition: all 0.3s ease;
 }
 
@@ -1101,7 +1102,7 @@ textarea {
 
     cursor: pointer;
     position: relative;
-
+    justify-self: start; 
     transition: 0.3s;
 }
 
@@ -1143,23 +1144,106 @@ textarea {
 }
 
   /* FOOTER STRIP INSIDE CARD */
-.notes-footer {
-    display: flex;
-    justify-content: center;
+  .notes-footer {
+    display: grid;
+    grid-template-columns: auto 1fr auto; /* 🔥 LEFT - CENTER - RIGHT */
     align-items: center;
-    gap: 15px;
 
+    width: 100%;
     margin-top: 20px;
-    position: relative;
 }
 
-/* DOWNLOAD BUTTON RIGHT */
-.download-btn-right {
-    position: absolute;
-    right: 0;
+.download-btn {
+    justify-self: start; /* LEFT */
 }
 
+.toggle-cont {
+    justify-self: end; /* RIGHT */
+}
 
+/* 🔥 ASK BUTTON ROW */
+.ask-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+/* 🎤 MIC BUTTON */
+.mic-btn {
+    width: 55px;
+    height: 55px;
+    margin-top: 10px;
+
+    border-radius: 50%;
+    border: none;
+
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(10px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px; /* 🔥 bigger icon */
+    color: white;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.mic-btn:hover {
+    background: rgba(255,255,255,0.12);
+    transform: scale(1.08);
+
+    box-shadow: 0 0 12px rgba(255,255,255,0.2);
+}
+
+/* 🔥 MIC ACTIVE */
+.mic-btn.active {
+    background: #f43f5e;
+    box-shadow: 0 0 20px rgba(244,63,94,0.6);
+}
+
+/* ✨ ASK BUTTON FULL REMAINING WIDTH */
+.ask-btn {
+    flex: 1;              /* 🔥 TAKE FULL SPACE */
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ask-container .btn {
+    width: 100% !important;   /* 🔥 override global 220px */
+}
+
+.ask-container .ask-btn {
+    flex: 1;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ask-container .mic-btn:hover {
+    background: linear-gradient(135deg, #a855f7, #7c3aed);
+
+    box-shadow:
+        0 0 20px rgba(168,85,247,0.6),
+        0 0 60px rgba(168,85,247,0.3);
+
+    transform: translateY(-2px);
+}
+
+.mic-icon {
+    width: 22px;
+    height: 22px;
+    fill: white; /* visible */
+}
 
 
 /* WRAPPER */
@@ -1258,4 +1342,185 @@ textarea {
     40% {
       opacity: 0.7;
     }
+  }
+
+  /* 🔥 RECORDING OVERLAY */
+.recording-overlay {
+    position: fixed;
+    top: 80px;
+    bottom: 100px;
+    left: 0;
+    right: 0;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    backdrop-filter: blur(15px);
+    background: rgba(2,6,23,0.5);
+
+    z-index: 999;
+}
+
+.recording-overlay.active {
+    display: flex;
+}
+
+/* BOX */
+.recording-box {
+    text-align: center;
+}
+.recording-box {
+    position: relative;
+}
+
+/* background ambient glow */
+.recording-box::before {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background: radial-gradient(circle, rgba(168,85,247,0.15), transparent 70%);
+    filter: blur(60px);
+    z-index: -1;
+}
+
+/* TIMER */
+#recordingTime {
+    font-size: 28px;
+    margin: 15px 0;
+    font-weight: 600;
+}
+
+/* CONTROLS */
+.recording-controls button {
+    margin: 10px;
+    padding: 10px 18px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+
+    background: rgba(255,255,255,0.1);
+    color: white;
+}
+
+/* 🔥 WAVE */
+.wave {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+
+    background: radial-gradient(circle, #a855f7, transparent);
+
+    transition: transform 0.1s linear;
+}
+
+
+
+#voiceWave {
+    width: 220px;
+    height: 220px;
+    margin: auto;
+
+    display: block;
+
+
+    filter: 
+        drop-shadow(0 0 25px rgba(168,85,247,0.4))
+        blur(0.3px);
+}
+
+.recording-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 🔥 PREMIUM TOGGLE (GLASS STYLE) */
+.toggle-cont {
+    width: 85px;
+    height: 42px;
+    border-radius: 9999px;
+  }
+  
+  /* HIDE INPUT */
+  .toggle-cont .toggle-input {
+    display: none;
+  }
+  
+  /* 🔥 TRACK (GLASS BACKGROUND) */
+  .toggle-cont .toggle-label {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    padding: 5px;
+    width: 100%;
+    height: 100%;
+  
+    border-radius: 9999px;
+  
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+  
+    border: 1px solid rgba(255,255,255,0.1);
+  
+    box-shadow: 
+      0 0 10px rgba(168,85,247,0.2),
+      inset 0 0 10px rgba(255,255,255,0.05);
+  
+    transition: all 0.3s ease;
+  }
+  
+  /* 🔥 INNER CIRCLE */
+  .toggle-cont .cont-label-play {
+    position: relative;
+    width: 32px;
+    height: 32px;
+  
+    background: rgba(255,255,255,0.1);
+  
+    border-radius: 50%;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    box-shadow: 0 0 12px rgba(168,85,247,0.3);
+  
+    transition: all 0.4s cubic-bezier(1, 0, 0, 1);
+  }
+  
+  /* 🔥 ACTIVE STATE (MOVE + GLOW) */
+  .toggle-cont .toggle-input:checked + .toggle-label .cont-label-play {
+    transform: translateX(42px);
+  
+    background: #f43f5e; /* 🔴 RED */
+  
+    box-shadow: 
+      0 0 20px rgba(244,63,94,0.8),
+      0 0 40px rgba(244,63,94,0.4);
+  }
+  
+  /* ▶️ PLAY ICON */
+  .toggle-cont .label-play {
+    width: 16px;
+    height: 16px;
+  
+    background: white;
+  
+    clip-path: polygon(25% 0, 75% 50%, 25% 100%);
+    transition: all 0.3s ease;
+  }
+  
+  /* ⏸ PAUSE ICON */
+  .toggle-cont .toggle-input:checked + .toggle-label .label-play {
+    width: 14px;
+    height: 14px;
+  
+    clip-path: polygon(0 0, 40% 0, 40% 100%, 0 100%, 60% 0, 100% 0, 100% 100%, 60% 100%);
   }
