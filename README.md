@@ -1,37 +1,3 @@
-<<<<<<< HEAD
-# 🤖 Ashtavakra AI – Meeting Notes Generator
-
-AI-powered web app that converts meeting audio or transcripts into structured notes using **Whisper** and **Llama3 (Ollama)**.
-
----
-
-## 🚀 Features
-
-- Convert audio → text using Whisper  
-- Generate structured notes:
-  - Summary  
-  - Key Points  
-  - Action Items  
-- Ask questions from generated notes  
-- Fully local AI (no paid APIs)  
-- Clean and simple UI  
-
----
-
-## 🧠 Workflow
-
-Audio / Transcript  
-↓  
-Whisper (Speech-to-Text)  
-↓  
-Transcript  
-↓  
-Llama3 (Ollama)  
-↓  
-Structured Notes  
-
----
-=======
 # 🤖 Maniot — AI Meeting Intelligence System
 
 Maniot is a fully local AI-powered web application that transforms meeting audio, transcripts, and documents into structured, actionable insights.
@@ -104,36 +70,10 @@ frontend/
 │── audio.html
 │── transcript.html
 │── result.html
->>>>>>> 515103f (Updated README + added screenshots + add more fonction + UI improvements + ask questions feature)
 
-## 🛠 Tech Stack
+backend/
+│── main.py
 
-<<<<<<< HEAD
-- Frontend: HTML, CSS, JavaScript  
-- Backend: FastAPI  
-- Speech-to-Text: Whisper  
-- LLM: Llama3 (Ollama)  
-- Audio: FFmpeg  
-
----
-
-## 📸 Screenshots
-
-![Landing](screenshots/landing_page.png)  
-![Upload](screenshots/audio_upload.png)  
-![Transcript](screenshots/transcript_input.png)  
-![Processing](screenshots/loading_screen.png)  
-![Result](screenshots/generated_notes.png)  
-![Ask](screenshots/ask_qustions.png)  
-
----
-
-## ⚙️ Setup
-
-```bash
-git clone https://github.com/DarshanPatel2006/AI-Meeting-Notes-Generator.git
-cd AI-Meeting-Notes-Generator
-=======
 uploads/
 screenshots/
 ```
@@ -171,35 +111,11 @@ pip install -r requirements.txt
 
 * Install **FFmpeg**
 * Install **Ollama**
->>>>>>> 515103f (Updated README + added screenshots + add more fonction + UI improvements + ask questions feature)
 
-python -m venv venv
-venv\Scripts\activate
-
-pip install -r requirements.txt
+Pull Llama3 model:
 
 ```
 ollama run llama3
-<<<<<<< HEAD
-uvicorn backend.main:app --reload
-
-Open:
-http://localhost:8000/
-```
-## 📌 Future Improvements
-```
-Speaker identification
-Real-time transcription
-RAG-based search
-Export to PDF
-```
-
-## 👨‍💻 Author
-### Darshan Patel
-⭐ Support
-
-If you found this project useful, consider giving it a ⭐ on GitHub!
-=======
 ```
 
 ### 6️⃣ Run Backend
@@ -260,4 +176,3 @@ AI / ML Developer 🚀
 ## ⭐ Support
 
 If you like this project, consider giving it a ⭐ on GitHub!
->>>>>>> 515103f (Updated README + added screenshots + add more fonction + UI improvements + ask questions feature)
